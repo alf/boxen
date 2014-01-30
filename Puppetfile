@@ -61,11 +61,11 @@ github "emacs",      "1.1.1"
 github "zsh",        "1.0.0"
 github "osx",        "2.2.2"
 github "vagrant",    "3.0.4"
-github "java",       "1.2.0"
 github "iterm2",     "1.0.6"
 github "onepassword","1.1.0"
 github "spotify",    "1.0.1"
 github "tmux",       "1.0.2"
+github "dropbox",    "1.2.0"
 
 
 # Optional/custom modules. There are tons available at

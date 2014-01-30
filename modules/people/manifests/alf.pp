@@ -1,19 +1,30 @@
 class people::alf {
-  notify { 'class people::alf declared': }
-
   include emacs
   include zsh
-  include java
-  include iterm2::dev
+  include iterm2::stable
   include iterm2::colors::solarized_light
   include onepassword
   include spotify
   include tmux
+  include dropbox
 
-  repository {
-    '/Users/${::boxen_user}/.emacs.d':
+  package {
+    [
+      'maven',
+      'graphviz'
+    ]:
+  }   
+
+  $home = "/Users/${::boxen_user}"
+  $emacs_dir = "${boxen::config::srcdir}/emacs.d"
+  repository { "${emacs_dir}":
       source   => 'alf/emacs.d',
-      provider => 'git';
+  }
+
+  file { "${home}/.emacs.d":
+    ensure => link,
+    target => "${emacs_dir}",
+    require => Repository[$emacs_dir]
   }
 }
 
