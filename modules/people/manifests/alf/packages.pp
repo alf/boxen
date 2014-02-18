@@ -12,6 +12,15 @@ class people::alf::packages {
   include dropbox
 
   package {
+    # 'emacs-mu4e-deps':
+    [
+      'libtool',
+      'pkg-config',
+      'glib'
+    ]:
+  }
+  
+  package {
     [
       'maven',
       'graphviz'
