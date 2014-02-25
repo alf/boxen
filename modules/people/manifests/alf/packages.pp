@@ -27,6 +27,22 @@ class people::alf::packages {
     ]:
   }
 
+  file { "/Library/Spelling":
+    source  => 'puppet:///modules/people/alf/dictionaries',
+    recurse => true,
+    require => Package[hunspell]
+  }
+  ->
+  file { "/Library/Spelling/default.aff":
+    ensure => link,
+    source => "/Library/Spelling/en-US.aff",
+  }
+  ->
+  file { "/Library/Spelling/default.dic":
+    ensure => link,
+    source => "/Library/Spelling/en-US.dic",
+  }
+  
   package {
     [
       'maven',
