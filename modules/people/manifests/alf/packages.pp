@@ -19,11 +19,18 @@ class people::alf::packages {
       'glib'
     ]:
   }
-  
+
+  package {
+    # 'emacs-flyspell-deps':
+    [
+      'hunspell'
+    ]:
+  }
+
   package {
     [
       'maven',
       'graphviz'
     ]:
-  }   
+  }
 }
