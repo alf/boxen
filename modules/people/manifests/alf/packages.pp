@@ -16,14 +16,17 @@ class people::alf::packages {
     [
       'libtool',
       'pkg-config',
-      'glib'
+      'offlineimap',
+      'glib',
+      'gmime',
+      'xapian',
     ]:
   }
 
   package {
     # 'emacs-flyspell-deps':
     [
-      'hunspell'
+      'hunspell',
     ]:
   }
 
