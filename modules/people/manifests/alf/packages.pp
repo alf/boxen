@@ -17,6 +17,7 @@ class people::alf::packages {
       'libtool',
       'pkg-config',
       'offlineimap',
+      'html2text',
       'glib',
       'gmime',
       'xapian',
