@@ -50,7 +50,9 @@ class people::alf::packages {
   package {
     [
       'maven',
-      'graphviz'
+      'graphviz',
+      'coreutils',
+      'gnupg',
     ]:
   }
 }
