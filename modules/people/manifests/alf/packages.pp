@@ -53,6 +53,8 @@ class people::alf::packages {
       'graphviz',
       'coreutils',
       'gnupg',
+      'mercurial',
+      'bazaar'
     ]:
   }
 }
